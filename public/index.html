@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Spicy: Fresh Tikki Burgers, Moti Nagar</title>
+<link rel="icon" href="logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Rozha+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head><body>
+<header class="top"><a href="#home" class="brand"><span class="lg"><img src="logo.jpg" alt=""></span><b>Spicy</b></a></header>
+<div id="pb" class="pb" hidden></div>
+<main>
+<section id="home">
+  <div class="hero">
+    <span class="lg big"><img src="logo.jpg" alt="Spicy.com chili logo"></span>
+    <h1>Fresh tikki burgers, made when you order</h1>
+    <p>Aloo, paneer, chicken and mutton tikki burgers in dozens of sauces. Dine in or take away.</p>
+    <a class="pri" href="#menu">Order now</a>
+  </div>
+  <div class="card"><b>Open 3:30 PM to 10:30 PM</b><div class="mu">Closed on Saturday</div></div>
+  <div class="card"><b>B-171, New Moti Nagar</b><div class="mu">Moti Nagar, New Delhi 110015</div><div class="mu">Owner: Amit Pahawa</div></div>
+</section>
+
+<section id="menu" hidden>
+  <h2>Menu</h2>
+  <div class="chips"><button class="chip on" data-f="all">All</button><button class="chip" data-f="veg"><i class="dot veg"></i>Veg</button><button class="chip" data-f="nonveg"><i class="dot nonveg"></i>Non-veg</button></div>
+  <div id="list"></div>
+</section>
+
+<section id="upi" hidden>
+  <h2>Pay with UPI</h2>
+  <div class="card c"><div id="sq" class="qr"></div><div class="mu">Scan with any UPI app</div>
+    <p><b id="uid">9213709770-1@okbizaxis</b><br><span class="mu">Name: AMIT PAHAWA</span></p>
+    <button class="ghost" id="cp">Copy UPI ID</button>
+    <p class="mu">After paying, show the payment screen at the counter. Staff will verify it.</p></div>
+</section>
+
+<section id="contact" hidden>
+  <h2>Contact</h2>
+  <div class="card"><b>Call or WhatsApp</b><div class="mu">+91 99119 60961</div>
+    <div class="btns"><a class="pri" href="tel:+919911960961">Call</a><a class="pri" href="https://wa.me/919911960961" target="_blank" rel="noopener">WhatsApp</a></div></div>
+  <div class="card"><b>Find us</b><div class="mu">B-171, New Moti Nagar, Moti Nagar, New Delhi, Delhi 110015</div>
+    <div class="btns"><a class="pri" href="https://www.google.com/maps/search/?api=1&query=B-171+New+Moti+Nagar+Moti+Nagar+New+Delhi+110015" target="_blank" rel="noopener">Open in Maps</a></div></div>
+  <div class="card"><b>Hours</b><div class="mu">3:30 PM to 10:30 PM, closed on Saturday</div><div class="mu">Dine-in and packing. Owner: Amit Pahawa</div></div>
+</section>
+
+<section id="staff" hidden>
+  <h2>Staff</h2>
+  <div id="sl" class="card"><input id="pin" type="password" inputmode="numeric" placeholder="Staff PIN"><button class="pri" id="login">Log in</button><p id="lerr" class="err"></p></div>
+  <div id="sd" hidden>
+    <div class="card"><button class="pri" id="pz">Pause orders</button><input id="pm" placeholder="Message customers see when paused"></div>
+    <h3>Orders</h3><div id="ord"></div>
+    <h3>Menu</h3><div id="mn"></div>
+    <div class="card"><b>Add item</b>
+      <input id="an" placeholder="Item name"><input id="ac" placeholder="Category, like Cold Drinks" list="cats"><datalist id="cats"></datalist>
+      <select id="at"><option value="veg">Veg</option><option value="nonveg">Non-veg</option></select>
+      <input id="ap" type="number" inputmode="numeric" placeholder="Price in ₹"><button class="pri" id="add">Add to menu</button></div>
+  </div>
+</section>
+</main>
+
+<div id="cb" class="cb" hidden><span></span><button class="pri" id="vo">View order</button></div>
+<nav><a href="#home">Home</a><a href="#menu">Menu</a><a href="#upi">UPI</a><a href="#contact">Contact</a><a href="#staff">Staff</a></nav>
+<dialog id="co"></dialog>
+<script src="app.js"></script>
+</body></html>
